@@ -1,10 +1,10 @@
 <h1>Boston key party 2015</h1>
 <h2>Haymarket</h2>
 Dans cette épreuve, on nous donne une archive contenant 32 images de cartes perforées.
-Ces cartes étaient utilisées dans les début de l'informatique.
+Ces cartes étaient utilisées dans les débuts de l'informatique.
 Vous trouverez facilement la table de correspondance trou/caractère sur internet.
 
-Le script suivant permet d'extraire le contenur des images : 
+Le script suivant permet d'extraire le contenu des images : 
 
 ```python
 	# -*- encode:UTF-8 -*-

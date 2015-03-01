@@ -12,7 +12,7 @@ c0 44 a9 c7 00 88 ff ff 43 01 81 0c 02 00 2d 00
 00 02 ff 00
 ```
 
-L'information du mouvement de la souris semble être stocké dans les 4 derniers octets de chaque paquet : 
+L'information du mouvement de la souris semble être stockée dans les 4 derniers octets de chaque paquet : 
 octet 1 : boolean :  
 	- 0 : pas de click
 	- 1 : click gauche
@@ -85,20 +85,23 @@ octet 4 : molette ? (il est toujours à 0 sur la capture donnée)
 	f.close()
 ```
 
-L'image obtenu est alors : 
+L'image obtenue est alors : 
 
 <img src="pcapImage.png"/>
 
-Nous avons compris au bout de quelques minutes qu'il s'agissait d'un clavier virtuel qwerty.
+Nous avons compri au bout de quelques minutes qu'il s'agissait d'un clavier virtuel qwerty.
 
 <img src="pcapImage2.png"/>
 
 En relevant la position du curseur à chaque clic, nous avont trouvé le message suivant : 
 
+```
 THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG THEKEYISIHEARDYOULIKEDSKETCHYETCHINGLASTYEAR
+```
 
 "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG" est une phrase contenant toutes les lettres de l'alphabet.
-Et la clée était évidemment IHEARDYOULIKEDSKETCHYETCHINGLASTYEAR.
+
+Et la clée était évidemment **IHEARDYOULIKEDSKETCHYETCHINGLASTYEAR.**
 
 
 
