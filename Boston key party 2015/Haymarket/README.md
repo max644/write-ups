@@ -6,7 +6,7 @@ Vous trouverez facilement la table de correspondance trou/caractère sur internet
 
 Le script suivant permet d'extraire le contenur des images : 
 
-'''python
+```python
 	# -*- encode:UTF-8 -*-
 	import Image
 
@@ -129,9 +129,10 @@ Le script suivant permet d'extraire le contenur des images :
 			outputStr = outputStr + o[total]
 
 	print outputStr
-'''
+```
 
 Ce qui nous donne : 
+
 IDENTIFICATION DIVISION. PROGRAM-ID. LETS-MAKE-A-DEAL. AUTHOR   MONTE HALPARIN. DATA DIVISION. WORKING-STORAGE SECTION.  01   DOORCHOICES.    02  GOODDOOR        PIC 9.    02  FIRSTCHOICE       PIC 9.
     02  OPENDOOR        PIC 9.    02  CHANGEDOOR        PIC 9.  01 CURRENTDATE.    02  CURRENTYEAR     PIC 9(4).      02  CURRENTMONTH    PIC 99.    02  CURRENTDAY      PIC 99.  01   DAYOFYEAR.    02
   CURRENTMONTH FILLER          PIC 9(4).    02  YEARDAY           PIC 9(3).  01 CURRENTTIME.    02  CURRENTHOUR     PIC 99.        02  CURRENTMINUTE   PIC 99.    02  CURRENTTENS     PIC 9.      02  CU
@@ -146,7 +147,6 @@ D-IF    IF CURRENTTENS = 1 OR   CURRENTTENS = 3       SET CHANGEDOOR TO 3    END
 DOOR = GOODDOOR      DISPLAY 'MH: CONGRASETULATIONS! YOU FOUND A KEY.'    DISPLAY   'MH: THE KEY IS:'    DISPLAY 'KEY  (SETALEXTREBEKISASOCIALENGINEER)' ELSE    DISPLAY 'MONTY HALL   OPENS THE DOOR. A
  GOAT JUMPS OUT.'    DISPLAY 'MH: THIS IS   THE INCORRECT DOOR.'    DISPLAY 'THE GOAT EATS YOUR PUNCH   CARDS. START OVER.'. STOP RUN.
  
-
 CONGRASETULATIONS! YOU FOUND A KEY. THE KEY IS: KEY  (SETALEXTREBEKISASOCIALENGINEER)
 
 La clée était "SETALEXTREBEKISASOCIALENGINEER"
