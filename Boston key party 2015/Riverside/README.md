@@ -4,11 +4,13 @@ Pour ce challenge, il nous était donné un fichier pcapng contenant un capture d'
 La fréquence et la taille des paquets est trop grande pour que ce puisse être une clée USB et trop rapide pour que ce soit un clavier USB.
 Nous avons donc pensé que c'était une souris.
 
+```
 c0 44 a9 c7 00 88 ff ff 43 01 81 0c 02 00 2d 00 
 7f 99 ea 54 00 00 00 00 d3 6d 06 00 00 00 00 00 
 04 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 
 08 00 00 00 00 00 00 00 04 02 00 00 00 00 00 00 
 00 02 ff 00
+```
 
 L'information du mouvement de la souris semble être stocké dans les 4 derniers octets de chaque paquet : 
 octet 1 : boolean :  
