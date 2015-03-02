@@ -1,7 +1,7 @@
 <h1>Boston key party 2015</h1>
 <h2>Reverside</h2>
-Pour ce challenge, il nous était donné un fichier pcapng contenant un capture d'un flux USB.
-La fréquence et la taille des paquets est trop grande pour que ce puisse être une clée USB et trop rapide pour que ce soit un clavier USB.
+Pour ce challenge, il nous était donné un fichier pcapng contenant une capture d'un flux USB.
+La fréquence et la taille des paquets est trop grande pour que ce puisse être une clé USB et trop rapide pour que ce soit un clavier USB.
 Nous avons donc pensé que c'était une souris.
 
 ```
@@ -13,13 +13,30 @@ c0 44 a9 c7 00 88 ff ff 43 01 81 0c 02 00 2d 00
 ```
 
 L'information du mouvement de la souris semble être stockée dans les 4 derniers octets de chaque paquet : 
-octet 1 : boolean :  
-	- 0 : pas de click
-	- 1 : click gauche
-	- 2 : click droit ? (pas dans la capture donnée)
-octet 2 : signed int : mouvement de la souris sur l'axe X
-octet 3 : signed int : mouvement de la souris sur l'axe Y
-octet 4 : molette ? (il est toujours à 0 sur la capture donnée)
+<ul>
+	<li>
+    	octet 1 : boolean 
+		<ul>
+        	<li>
+            	0 : pas de click
+            </li>
+            <li>
+				1 : click gauche
+            </li>
+            <li>
+				2 : click droit ? (pas dans la capture donnée)
+            </li>
+        </ul>
+    <li>
+  		octet 2 : signed int : mouvement de la souris sur l'axe X
+    </li>
+    <li>
+		octet 3 : signed int : mouvement de la souris sur l'axe Y
+    </li>
+    <li>
+    	octet 4 : molette ? (il est toujours à 0 sur la capture donnée)
+	</li>
+</ul>
 
 ```python
 	#!/usr/bin/env python
@@ -89,7 +106,7 @@ L'image obtenue est alors :
 
 <img src="pcapImage.png"/>
 
-Nous avons compri au bout de quelques minutes qu'il s'agissait d'un clavier virtuel qwerty.
+Nous avons compris au bout de quelques minutes qu'il s'agissait d'un clavier virtuel qwerty.
 
 <img src="pcapImage2.png"/>
 
@@ -101,7 +118,7 @@ THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG THEKEYISIHEARDYOULIKEDSKETCHYETCHING
 
 "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG" est une phrase contenant toutes les lettres de l'alphabet.
 
-Et la clée était évidemment **IHEARDYOULIKEDSKETCHYETCHINGLASTYEAR.**
+Et la clée était évidemment **IHEARDYOULIKEDSKETCHYETCHINGLASTYEAR**.
 
 
 
